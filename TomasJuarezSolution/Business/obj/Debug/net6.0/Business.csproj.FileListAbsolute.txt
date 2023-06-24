@@ -10,3 +10,8 @@ C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\obj\Debu
 C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\obj\Debug\net6.0\refint\Business.dll
 C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\obj\Debug\net6.0\Business.pdb
 C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\bin\Debug\net6.0\Entities.dll
+C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\bin\Debug\net6.0\Entities.pdb
+C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\Business\obj\Debug\net6.0\Business.csproj.CopyComplete

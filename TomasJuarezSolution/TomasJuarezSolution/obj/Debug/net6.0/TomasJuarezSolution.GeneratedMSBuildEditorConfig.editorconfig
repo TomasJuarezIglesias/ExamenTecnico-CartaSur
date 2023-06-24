@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Pc\Desktop\ExamenTecnico-CartaSur\TomasJuarezSolution\TomasJuarezSolution
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/EmpleadosActivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRW1wbGVhZG9zQWN0aXZvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/EmpleadosInactivos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRW1wbGVhZG9zSW5hY3Rpdm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
