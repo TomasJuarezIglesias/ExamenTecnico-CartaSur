@@ -58,7 +58,7 @@ namespace TomasJuarezSolution.Controllers
                 throw ex;
             }
         }
-        public async Task<ActionResult> VerEmpleadosPendientes()
+        public ActionResult VerEmpleadosPendientes()
         {
             try
             {
