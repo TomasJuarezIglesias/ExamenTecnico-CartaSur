@@ -1,0 +1,25 @@
+﻿@model Entities.Venta
+
+
+@{
+    ViewData["Title"] = "DiaMayorVenta";
+}
+
+<h1>Dia de mayores ventas!!</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Venta)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Fecha_Venta)
+            </td>
+        </tr>
+    </tbody>
+</table>

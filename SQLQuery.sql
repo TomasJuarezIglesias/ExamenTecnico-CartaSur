@@ -36,3 +36,37 @@ END
 GO
 
 EXEC GetFechaMayoresVentas
+
+CREATE TABLE EmpleadosPendientes(
+	Id_empleado INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	Legajo varchar(20),
+	Apellido varchar(30),
+	Nombre varchar(30),
+	Dni Bigint,
+	Cuil BigInt,
+	Fecha_nacimiento datetime
+)
+
+GO
+
+CREATE PROC IngresarEmpleadoPendiente
+(
+	@Legajo varchar(20),
+	@Apellido varchar(30),
+	@Nombre varchar(30),
+	@Dni BigInt,
+	@Cuil BigInt,
+	@Fecha_nacimiento datetime
+)
+AS
+	INSERT INTO EmpleadosPendientes(Legajo, Apellido, Nombre, Dni, Cuil, Fecha_nacimiento) 
+	VALUES (@Legajo, @Apellido, @Nombre, @Dni, @Cuil, @Fecha_nacimiento)
+GO
+
+CREATE PROC ObtenerEmpleadosPendientes
+AS
+BEGIN
+SELECT * FROM EmpleadosPendientes
+END
+GO
+

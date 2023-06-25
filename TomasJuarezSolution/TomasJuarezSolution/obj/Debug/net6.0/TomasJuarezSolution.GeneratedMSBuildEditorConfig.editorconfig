@@ -24,8 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRW1wbGVhZG9zSW5hY3Rpdm9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/View.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cVmlldy5jc2h0bWw=
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/EmpleadosPendientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRW1wbGVhZG9zUGVuZGllbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/IngresarEmpleado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cSW5ncmVzYXJFbXBsZWFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Empleado/ListaEmpleados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cTGlzdGFFbXBsZWFkb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Home/Index.cshtml]
@@ -42,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/Venta/DiaMayorVenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcRGlhTWF5b3JWZW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Pc/Desktop/ExamenTecnico-CartaSur/TomasJuarezSolution/TomasJuarezSolution/Views/_ViewImports.cshtml]

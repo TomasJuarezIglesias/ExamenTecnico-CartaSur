@@ -1,14 +1,10 @@
 ﻿@model IEnumerable<Entities.Empleado>
 
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "ListaEmpleados";
 }
 
 <h1>Lista Empleados</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -41,11 +37,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Activo)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }

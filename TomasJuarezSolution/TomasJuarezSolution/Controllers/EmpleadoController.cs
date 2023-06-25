@@ -19,7 +19,7 @@ namespace TomasJuarezSolution.Controllers
             try
             {
                 IEnumerable<Empleado>? Empleados = await apiBusiness.GetColection();
-                return View("View",Empleados);
+                return View("ListaEmpleados",Empleados);
             }
             catch (Exception ex)
             {
@@ -55,11 +55,25 @@ namespace TomasJuarezSolution.Controllers
                 throw ex;
             }
         }
+        public async Task<ActionResult> VerEmpleadosPendientes()
+        {
+            try
+            {
+                EmpleadoBusiness empleadoBusiness = new();
+                IEnumerable<Empleado>? Empleados = empleadoBusiness.ObtenerPendientes();
+                return View("EmpleadosPendientes", Empleados);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         // GET: EmpleadoController/Create
-        public ActionResult Create()
+        public ActionResult IngresarEmpleado()
         {
-            return View();
+            return View("IngresarEmpleado");
         }
 
         // POST: EmpleadoController/Create
@@ -69,11 +83,21 @@ namespace TomasJuarezSolution.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                EmpleadoBusiness empleadoBusiness = new EmpleadoBusiness();
+                bool Ok = empleadoBusiness.IngresarEmpleado(collection);
+
+                if (!Ok)
+                {
+                    return View("IngresarEmpleado");
+                }
+
+
+                return RedirectToAction("VerEmpleadosPendientes");
             }
             catch
             {
-                return View();
+
+                return View("IngresarEmpleado");
             }
         }
     }

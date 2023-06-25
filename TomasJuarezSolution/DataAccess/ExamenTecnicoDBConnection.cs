@@ -50,10 +50,14 @@ namespace DataAccess
         {
             AbrirConexion();
             DataTable dataTable = new DataTable();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
-            sqlDataAdapter.SelectCommand = new SqlCommand();
-            sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            sqlDataAdapter.SelectCommand.CommandText = sp;
+
+            SqlDataAdapter sqlDataAdapter = new();
+
+            sqlDataAdapter.SelectCommand = new SqlCommand
+            {
+                CommandType = CommandType.StoredProcedure,
+                CommandText = sp
+            };
 
             if (parameters != null) 
             {
@@ -68,8 +72,27 @@ namespace DataAccess
             return dataTable;
         }
 
+        // Metodo Permite la ejecucion de Stored Procedure para ingresar valores a las tablas
+        public bool Ingresar(string sp, SqlParameter[]? parameters)
+        {
+            if (parameters is null) return false;
 
-        
+            AbrirConexion();
 
+            SqlCommand sqlCommand = new(sp, _Connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            sqlCommand.Parameters.AddRange(parameters);
+            var canInsert = sqlCommand.ExecuteNonQuery();
+
+            if (canInsert is -1)
+            {
+                return false;
+            }
+            CerrarConexion();
+            return true;
+        }
     }
 }
