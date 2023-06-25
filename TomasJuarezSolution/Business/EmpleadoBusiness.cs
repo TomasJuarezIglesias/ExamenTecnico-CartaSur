@@ -28,6 +28,7 @@ namespace Business
             EmpleadoApiConnection empleadoApiConnection = new();
             var response = empleadoApiConnection.PostEntity(empleado);
 
+            // Se verifica si esta en estado pendiente de activacion
             if (response.Status is not TaskStatus.WaitingForActivation)
             {
 
@@ -35,13 +36,14 @@ namespace Business
                 
             }
 
-            // Ingresar en una DB al nuevo empleado
+            // Se ingresa al empleado en la tabla de empleados pendientes para no perder su informacion.
             EmpleadoPendienteDataAccess empleadoPendienteDataAccess = new();
             empleadoPendienteDataAccess.IngresarEmpleado(empleado);
 
             return true;
         }
 
+        // Metodo utilizado como medio de transferencia del resultado obtenido
         public List<Empleado> ObtenerPendientes()
         {
             EmpleadoPendienteDataAccess empleadoPendienteDataAccess = new();

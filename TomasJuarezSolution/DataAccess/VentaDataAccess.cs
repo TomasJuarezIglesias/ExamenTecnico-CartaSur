@@ -18,7 +18,7 @@ namespace DataAccess
             conn = ExamenTecnicoDBConnection.GetInstance;
         }
 
-        // Envia el StoredProcedure al metodo leer y recibe un DataTable
+        // Envia el StoredProcedure al metodo leer y recibe un DataTable con el resultado
         public Venta GetFechaMayorVentas()
         {
             DataTable dataTable = conn.Leer("GetFechaMayoresVentas", null);

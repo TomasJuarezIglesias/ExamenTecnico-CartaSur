@@ -21,6 +21,7 @@ namespace DataAccess
         // Se ingresa un Empleado
         public void IngresarEmpleado(Empleado empleadoPendiente)
         {
+            // Se añaden los parametros al array de parametros
             SqlParameter[] sqlParameters = new SqlParameter[] {
                 new SqlParameter("@Legajo", empleadoPendiente.Legajo),
                 new SqlParameter("@Apellido", empleadoPendiente.Apellido),
@@ -30,7 +31,7 @@ namespace DataAccess
                 new SqlParameter("@Fecha_nacimiento", empleadoPendiente.FechaNacimiento)
             };
 
-            // En este caso no se utiliza el booleano retornado,
+            // No se utiliza el booleano retornado
             // ya que se va a ejecutar el metodo si y solo si la respuesta del post es positiva(esperando aprobacion)
             conn.Ingresar("IngresarEmpleadoPendiente", sqlParameters);
         }
@@ -42,8 +43,7 @@ namespace DataAccess
 
             DataTable dataTable = conn.Leer("ObtenerEmpleadosPendientes", null);
 
-
-
+            // Se carga la lista con los valores obtenidos
             foreach (DataRow row in dataTable.Rows)
             {
                 Empleado Empleado = new Empleado
@@ -57,7 +57,6 @@ namespace DataAccess
                 };
 
                 EmpleadosPendientes.Add(Empleado);
-                
             }
 
             return EmpleadosPendientes;

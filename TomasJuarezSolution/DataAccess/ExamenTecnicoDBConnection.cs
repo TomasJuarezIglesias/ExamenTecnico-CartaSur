@@ -22,6 +22,7 @@ namespace DataAccess
         // Singleton
         private static ExamenTecnicoDBConnection? _instance = null;
 
+        // Propiedad static para que tan solo se realice una instancia de la clase
         public static ExamenTecnicoDBConnection GetInstance
         {
             get

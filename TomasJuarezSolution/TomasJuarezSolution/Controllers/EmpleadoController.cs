@@ -18,6 +18,7 @@ namespace TomasJuarezSolution.Controllers
         {
             try
             {
+                // Se obtienen todos los empleados
                 IEnumerable<Empleado>? Empleados = await apiBusiness.GetColection();
                 return View("ListaEmpleados",Empleados);
             }
@@ -31,6 +32,7 @@ namespace TomasJuarezSolution.Controllers
         {
             try
             {
+                // Se obtienen todos los empleados y se filtran por activos
                 IEnumerable<Empleado>? Empleados = await apiBusiness.GetColection();
                 Empleados = Empleados?.Where(e => e.Activo == true);
                 return View("EmpleadosActivos", Empleados);
@@ -45,6 +47,7 @@ namespace TomasJuarezSolution.Controllers
         {
             try
             {
+                // Se obtienen todos los empleados y se filtran por inactivos
                 IEnumerable<Empleado>? Empleados = await apiBusiness.GetColection();
                 Empleados = Empleados?.Where(e => e.Activo == false);
                 return View("EmpleadosInactivos", Empleados);
@@ -59,6 +62,7 @@ namespace TomasJuarezSolution.Controllers
         {
             try
             {
+                // Se obtienen los empleados pendientes almacenados en la db
                 EmpleadoBusiness empleadoBusiness = new();
                 IEnumerable<Empleado>? Empleados = empleadoBusiness.ObtenerPendientes();
                 return View("EmpleadosPendientes", Empleados);
@@ -86,17 +90,17 @@ namespace TomasJuarezSolution.Controllers
                 EmpleadoBusiness empleadoBusiness = new EmpleadoBusiness();
                 bool Ok = empleadoBusiness.IngresarEmpleado(collection);
 
+                // Si no se encuentra en estado pendiente de activacion
                 if (!Ok)
                 {
+                    ViewBag.Error = "Ha ocurrido un problema con el registro. Llame al administrador";
                     return View("IngresarEmpleado");
                 }
-
 
                 return RedirectToAction("VerEmpleadosPendientes");
             }
             catch
             {
-
                 return View("IngresarEmpleado");
             }
         }

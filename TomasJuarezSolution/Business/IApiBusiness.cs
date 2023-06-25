@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business
 {
+    // Interface solo utilizable para clases que hereden de entity
     public interface IApiBusiness<T> where T : Entity
     {
         public Task<IEnumerable<T>?> GetColection();

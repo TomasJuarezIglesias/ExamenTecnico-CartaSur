@@ -1,12 +1,18 @@
 ﻿@model TomasJuarezSolution.Models.ViewModels.EmpleadoViewModel
 
 @{
-    ViewData["Title"] = "IngresarEmpleado";
+    ViewData["Title"] = "Ingresar Empleado";
 }
 
 <h1>Ingresar nuevo empleado</h1>
-
-<hr />
+@if (ViewBag.Error is not null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Error
+    </div>
+    
+}
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">

@@ -10,7 +10,7 @@ namespace Business
 {
     public class VentaBusiness
     {
-
+        // Metodo utilizado como medio de transferencia del resultado obtenido
         public Venta ObtenerDiaMayorVentas()
         {
             VentaDataAccess ventaDataAccess = new VentaDataAccess();
